@@ -2,17 +2,35 @@ body
     {
         font-family: Poppins, sans-serif;
         max-width: 800px;
-        margin: 25px auto;
+        margin: 50px auto;
         padding: 20px;
-    }
-h1 
-    {
-        color: #333;
+
+        /* background-image: url("images/background_image.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; */
     }
 
 .profile 
     {
         width: 300px;
-        border-radius: 10%;
+        border-radius: 5%;
         object-fit: cover;
     }
+
+table 
+{
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+td, th {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+img {
+    object-fit: cover;
+    display: block;
+}
