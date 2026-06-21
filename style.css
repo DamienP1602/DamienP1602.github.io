@@ -5,10 +5,8 @@ body
         margin: 50px auto;
         padding: 20px;
 
-        /* background-image: url("images/background_image.jpg");
+        background-image: url("images/background_image.jpg");
         background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat; */
     }
 
 .profile 
@@ -18,15 +16,20 @@ body
         object-fit: cover;
     }
 
+p, h1, h2, h3
+{
+    color: white;
+}
+
 table 
 {
     border-collapse: collapse;
-    border: 2px solid black;
+    border: 2px solid white;
 }
 
 td, th {
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid white;
     text-align: center;
 }
 
