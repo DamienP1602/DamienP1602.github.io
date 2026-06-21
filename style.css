@@ -32,8 +32,3 @@ td, th {
     border: 1px solid white;
     text-align: center;
 }
-
-img {
-    object-fit: cover;
-    display: block;
-}
