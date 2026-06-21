@@ -1,3 +1,15 @@
+<style>
+        body {
+            font-family: Poppins, sans-serif;
+            max-width: 800px;
+            margin: 25px auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+</style>
+
 <style>.profile 
             {
             width: 300px;
