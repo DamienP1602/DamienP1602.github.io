@@ -17,18 +17,19 @@ body
     }
 
 p, h1, h2, h3
-{
+    {
     color: white;
-}
+    }
 
 table 
-{
+    {
     border-collapse: collapse;
     border: 2px solid white;
-}
+    }
 
-td, th {
+td, th
+    {
     padding: 10px;
     border: 1px solid white;
     text-align: center;
-}
+    }
