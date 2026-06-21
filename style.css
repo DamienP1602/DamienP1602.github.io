@@ -1,19 +1,18 @@
-<style>
-        body {
+body 
+        {
             font-family: Poppins, sans-serif;
             max-width: 800px;
             margin: 25px auto;
             padding: 20px;
         }
-        h1 {
+h1 {
             color: #333;
         }
-</style>
 
-<style>.profile 
+.profile 
             {
             width: 300px;
             border-radius: 10%;
             object-fit: cover;
             }
-    </style>
+   </style>
