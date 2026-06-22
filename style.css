@@ -16,6 +16,12 @@ body
         object-fit: cover;
     }
 
+.btn 
+    {
+        background-color: transparent;
+        border: none;
+    }
+
 p, h1, h2, h3
     {
     color: white;
