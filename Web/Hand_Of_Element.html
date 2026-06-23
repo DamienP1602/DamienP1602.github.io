@@ -45,7 +45,7 @@
 
 <br>
     <p>After any server's actions (like spawning objects, changing cards' position in hand, putting cards on board), it will launch a ClientRPC.</p>
-    <p>The Client found the elements because anything created by the server is parented to the player who own the object.</p>
+    <p>The Client found the elements because anything created by the server is parented to the player who owns the object.</p>
         <center><img width="200" src="../images/Hand_Of_Elements_Parents.bmp"></center>
 
 <hr>
@@ -53,7 +53,7 @@
     <img class="show" src="../images/Hand_Of_Elements_Visual_Effect.bmp">
     <p>Visual Effects are created on the Server side when a Spell/Effect is launched.</p>
     <p>It will be initialized on the Client Side after the <b>OnNetworkSpawn()</b> method.</p>
-    <p>At the end of the effect, the Server takes over and execute the effect. Most of them is changing Network Variables or spawning objects, so it will be replicated to the Client.</p>
+    <p>At the end of the effect, the Server takes over and executes the effect. Most of them are changing Network Variables or spawning objects, so it will be replicated to the Client.</p>
 
 <hr>
     <center><button onclick="window.location.href='../index.html'" >
