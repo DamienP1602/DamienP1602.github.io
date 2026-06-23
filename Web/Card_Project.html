@@ -13,23 +13,76 @@
 </head>
 
 <body>
-    <h1><center>Card Project (Page WIP)</center></h1>
+    <h1><center>R&D Card Project</center></h1>
 
-    <table>
-        <tr><center><h2>Cult of Hela</h2></center></tr>
+    <h2><center>All of the cards' sprites are taken from Google, I do not possess any of them and I only used them for a more visual representation.</center></h2>
+    <hr>
+    <h3>Deck Creation</h3>
+    <img class="show" src="../images/Card_Game_Deck.bmp">
 
-        <td>
-            <button onclick="window.location.href='Cult_Of_Hela.html'">
-                <img class="profile" src="../images/Cult_Of_Hela_Profile_Picture.bmp">
-            </button>
-        </td>
-        <td>
-            <p>
-                This is a Diablo-like realized after a first attempt to familiarize myself with the mechanics
-                that can be found such as inventory, skills, and AI. This game is in a "vertical slice" state.
-            </p>
-        </td>
-    </table>
+    <p>In the deck creation segment, you can filter cards based on mutiple criteria :</p>
+    <li>Type</li>
+    <li>Element</li>
+    <li>Rarity</li>
+    <li>Effect</li>
+    <p>Example : Common, Beast, Fire, On Death</p>
 
+    <p>You can search cards by name as well, this will look up cards whose names include the text you've entered.</p>
+<hr>
+<br>
+    <h3>AI & Deck Selection</h3>
+    <img class="show" src="../images/Card_Game_AI_Game.bmp" >
+    <p>You can select between 3 premade decks or decks you've created.</p>
+    <p>After that, you can select up to 4 difficulties for the AI (made with an FSM) you will play against and one of the three premade decks for it.</p>
+<br>
+    <p>For more inderstanding of the AI, there's some informations of the game : </p>
+    <li>Token Cards don't cost anything, but you can play only 2 or those each turns.</li>
+    <li>You can discard a card from your hand to draw another one (some cards has an effect when discarded)</li>
+<br>
+    <p>AI breakdown :</p>
+    <li><b>Tuto : </b>
+        <ol><b>Hand : </b>It will play one random card from its hand.</ol>
+        <ol><b>Board : </b>It will attack with one card on his board.</ol>
+    </li>
+    <li><b>Easy : </b>
+        <ol><b>Hand : </b>It will try to play one Token card and one random card. (will prefer cards that are not expensive)</ol>
+        <ol><b>Board : </b>it will try to kill a card on board with one of its played minion.</ol>
+    </li>
+    <li><b>Normal : </b>        
+        <ol><b>Hand : </b>It will play cards until it can't play anymore, and after the 8th turn it will play the most expensive one.</ol>
+        <ol><b>Board : </b>It will try to attack with a card that has an effect on death and will search for a card on board that can kill them both. 
+        After that, it will select the most powerful card and will target a weaker card (mainly it wants to keep you without cards on your board).</ol> 
+    </li>
+    <li><b>Hard : </b>
+    <ol><b>Hand : </b>During the first turn, it will try to play a Token Card or discard one. After that, it will try to select a card from a priority list of effects (Draw, Deal Damages ,ect...)
+     and also with a condition priority (Spells, effect when played, on death, ect...). After the 7th turn, it will prioritize legendary cards.</ol>
+    <ol><b>Board : </b>Before attacking, it will verify if it can kill you with the cards it has on board, otherwise it will focus card that has an effect on death or when attacking.
+     It will also prioritize cards that can kill yours on board.
+     </ol>
+    </li>
+<hr>
+<br>
+    <h3>Gameplay Breakdown</h3>
+    <img class="show" src="../images/Card_Game_Profile_Picture.bmp">
+    <p>You draw 3 cards at the start of the game. You have 3 resources during the game :</p>
+    <li><b>Token Points : </b>Token Cards are weak but don't cost anything else, you can play 2 each turn.</li>
+    <li><b>Soul Shards : </b>This is the primary resource of the game. Cards that aren't tokens cost an amount of Soul Shards.</li>
+    <li><b>Profane Ponts : </b>This is a secondary resource of the game. When a card is destroyed, you gain 1 Profane Point. Some cards require an amount of this resource to be played.</li>
+<br>
+    <p>Each turn, you can discard one card and draw another one.</p>
+    <p>Card on board need 1 turn before attacking.</p>
+    <p>The win condition is to put the opponent's health to 0, and the loss condition is to have your health amount reduced to 0.</p>
+<hr>
+
+
+
+
+
+
+
+
+    <center><button onclick="window.location.href='index.html'" >
+        <b>Go Back</b>
+    </button></center>
 </body>
 </html>

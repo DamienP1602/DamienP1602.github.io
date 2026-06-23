@@ -22,16 +22,22 @@ body
         border: none;
     }
 
-p, h1, h2, h3
+p, h1, h2, h3, li
     {
-    color: white;
+        color: white;
     }
 
-table 
+.presentation 
     {
-    border-collapse: collapse;
-    border: 2px solid white;
+        border-collapse: collapse;
+        border: 2px solid white;
     }
+
+.show
+{
+    width: 800px;
+    object-fit: cover;
+}
 
 td, th
     {
