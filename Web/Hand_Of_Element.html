@@ -16,10 +16,45 @@
 <body>
     <h1><center>Hand of Elements (Page WIP)</center></h1>    
     <h2><center>This project is WIP, it is not finished and will be updated in the future.</center></h2>
+    <h3><center>This project was made with Netcode</center></h3>
+<hr>
+    <h3>Local Connections</h3>
+<img class="show" src="../images/Hand_Of_Elements_Local_Connection.bmp">
+    <p><b>Mainly for debugging</b></p>
+    <p>You can connect a client with a server. This requires having the same IP address to make a connection.</p>
 
+<br>
+    <h3>Online Connections</h3>
+<img class="show" src="../images/Hand_Of_Elements_Online_Connection.bmp">
+    <p>For an online connection, I used the <b>Unity Gaming Services</b> that create a connection for other players to join your game.</p>
+    <p>It will create a code that the client needs to enter in order to join the party.</p>
 
+<hr>
+    <h2>Client/Server Architecture</h2>
+    <table class="online" >
+    <td>
+        <img width="400" src="../images/Hand_Of_Elements_Server_View.bmp">      
+    </td>
+    <td>
+        <img width="400" src="../images/Hand_Of_Elements_Client_View.bmp">
+    </td>
+    </table>
 
-    
+    <p>The player (you) will always be at the bottom, your opponent will be at the top.</p>
+    <p>Players' interactions with the game are local, when it wants to do an action (like play a card), it will launch a ServerRPC.</p>
+
+<br>
+    <p>After any server's actions (like spawning objects, changing cards' position in hand, putting cards on board), it will launch a ClientRPC.</p>
+    <p>The Client found the elements because anything created by the server is parented to the player who own the object.</p>
+        <center><img width="200" src="../images/Hand_Of_Elements_Parents.bmp"></center>
+
+<hr>
+    <h2>Visual Effect Replication</h2>
+    <img class="show" src="../images/Hand_Of_Elements_Visual_Effect.bmp">
+    <p>Visual Effects are created on the Server side when a Spell/Effect is launched.</p>
+    <p>It will be initialized on the Client Side after the <b>OnNetworkSpawn()</b> method.</p>
+    <p>At the end of the effect, the Server takes over and execute the effect. Most of them is changing Network Variables or spawning objects, so it will be replicated to the Client.</p>
+
 <hr>
     <center><button onclick="window.location.href='../index.html'" >
         <b>Go Back</b>

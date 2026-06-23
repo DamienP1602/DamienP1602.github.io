@@ -45,3 +45,23 @@ td, th
     border: 1px solid white;
     text-align: center;
     }
+
+.online {
+    border-collapse: collapse;
+}
+
+.online td,
+.online th {
+    border: none;
+}
+
+.cache
+{
+    border-collapse: collapse;
+    display : none;
+}
+
+.cache td,
+.cache th {
+    border: none;
+}

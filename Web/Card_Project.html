@@ -12,6 +12,15 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 
+<script>
+
+    function toggleElement()
+    {
+        document.getElementById("AiCode").classList.toggle("cache")
+    }
+
+</script>
+
 <body>
     <h1><center>R&D Card Project</center></h1>
 
@@ -60,6 +69,20 @@
      It will also prioritize cards that can kill yours on board.
      </ol>
     </li>
+    
+    <button onclick="toggleElement()">
+        Exemple des Coroutines de l'IA (Facile)
+    </button>
+    <table class="cache" id="AiCode">
+    <td>
+        <img width="400" src="../images/Card_Game_AI_Code_Example_Hand.bmp"> 
+    </td>
+    <td>
+        <img width="400" src="../images/Card_Game_AI_Code_Example_Board.bmp">
+    </td>
+    </table>
+
+
 <hr>
 <br>
     <h3>Gameplay Breakdown</h3>
