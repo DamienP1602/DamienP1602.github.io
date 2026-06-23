@@ -16,10 +16,101 @@
 <body>
     <h1><center>Cult of Hela (Page WIP)</center></h1>    
     <h2><center>This project is in a Vertical Slice state.</center></h2>
+<hr>
+    <h2>3C</h2>
+    <img class="show" src="../images/Cult_Of_Hela_3C.bmp">
+    <h3>Camera</h3>
+    <p>This game is played with a 2/3 top camera view. The camera will hide elements between itself and the character.</p>
+    <h3>Character</h3>
+    <p>The character contains multiple elements : </p>
+    <li><b>Basic Attack :</b>
+        <ol>Damages calculated with stats & weapons</ol>
+    </li>
+    
+    <li><b>Spells :</b>
+        <ol>It can be offensive, defensive or utility and it's calculated by stats</ol>
+    </li>
 
+    <li><b>Stats :</b>
+    <ol><b>Strength : </b>increase you basic attack damages</ol>
+    <ol><b>Intelligence : </b>increase your spell damages</ol>
+    <ol><b>Dexterity : </b>increase your critical strike damages</ol>
+    <ol><b>Vitality : </b>increase your health</ol>
+    <ol><b>Spirit : </b>increase your mana</ol>
+    </li>
 
+    <li><b>Equipment slots :</b>
+        <ol>Head, Body, Leggings, Boots, Necklace, 2 Rings, Trinket, Right Hand, Left Hand </ol>
+    </li>
 
+    <li><b>Inventory :</b>
+        <ol>40 slots of inventory</ol>
+        <ol>Golds</ol>
+    </li>
 
+    <h3>Controller</h3>
+    <p>The character can be moved by a Right-Click, it will search for a path to travel (using Unity pathfinding).</p>
+    <p>You can press A,Z,E,R to cast binded spells in your Spellbar.</p>
+    <p>Left-Click makes you attack an enemy with a Basic Attack.</p>
+    <p>You can press C to open your Inventory and V to open you Spell book</p>
+<hr>
+
+    <h2>Game UI</h2>
+    <h3>Inventory</h3>
+    <img class="show" src="../images/Cult_Of_Hela_UI.bmp">
+    <p>You have 3 sections : </p>
+    <li><b>Character Statistics Sheet :</b>
+        <ol>Here you can see your level, experience, and all your statistics.</ol>
+        <ol>If you hover with your mouse over a statistics written in yellow, you will have a quick explanation of what it's doing to your character (top of the screen)</ol>
+    </li>
+    
+    <li><b>Equipments :</b>
+        <ol>Here you can see what equipment you have currently on your character. You can drag and drop an object from your inventory to put it in the slot.
+            If you select an item in your inventory, adapted slots will be white, otherwise red. Right-Click on an object in your Inventory will auto-equip it in the right slot and switch the currently equipped item.
+        </ol>
+    </li>
+    
+    <li><b>Character's Bag :</b>
+        <ol>When you Right-Click on an object on the ground, it will be put in your bag. If you put your mouse over an item, it will show a description of it (right-side of the screen).<br>
+            At the bottom-right, you have your gold amount.
+        </ol>
+    </li>
+    <br>
+    
+    <h3>Spellbook</h3>
+    <img class="show" src="../images/Cult_Of_Hela_Spellbook.bmp">
+    <p>For this version, you have 5 different spells you can equip plus your Basic Attack.</p>
+    <p>If you put your mouse over a spell or the basic attack, it will show a description of it.</p>
+    <p>Left-Click on a spell will equip/remove it from your spell bar in your Overlay.</p>
+    
+<br>
+    <h3>Overlay</h3>
+    <img class="show" src="../images/Cult_Of_Hela_Overlay.bmp">
+    <li><b>Bottom Right : </b>
+        <ol>Red Bar : Your Health</ol>
+        <ol>Blue Bar : Your Mana</ol>
+        <ol>4 spell slots you have binded</ol>
+        <ol>1 Basic-Attack slot (it's planned to have a different one in the future)</ol>
+    </li>
+    <li><b>Bottom-Right :</b>
+        <ol>Yellow Bar : Your Experience until the next level</ol>
+        <ol>C : Inventory button</ol>
+        <ol>V : Spellbook button</ol>
+        <ol>ESC : button planned to open the menu</ol>
+    </li>
+<hr>
+    <h2>IA</h2>
+    <p>I made them with an FSM that includes : states, transitions and a BrainComponent for the AI.</p>
+    <center><img width="600" src="../images/Cult_Of_Hela_AI.bmp"></center>
+    <p>This is how I create my behaviours</p>
+<br>
+    <p>There's 2 types of AI in this game : </p>
+    <h3><center>Regular Enemies :</center></h3>
+    <center><img width="200" src="../images/Cult_Of_Hela_Zombi.bmp"></center>
+    <h3><center>Boss :</center></h3>
+    <center><img width="200" src="../images/Cult_Of_Hela_Boss.bmp"></center>
+    <p>Bosses can cast spells, deal more damage and have a lot of health.</p>
+    <center><img width="300" src="../images/Cult_Of_Hela_Boss _Attack.bmp"></center>
 <hr>
     <center><button onclick="window.location.href='../index.html'" >
         <b>Go Back</b>
